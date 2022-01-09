@@ -7,6 +7,19 @@
     android:padding="12dp"
     tools:context=".MainActivity">
 
+    <EditText
+        android:id="@+id/inputNameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Input name"
+        android:inputType="textPersonName"
+        android:padding="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
@@ -39,17 +52,15 @@
             android:text="Say I Love You" />
     </LinearLayout>
 
-    <EditText
-        android:id="@+id/inputNameEditText"
+    <Button
+        android:id="@+id/awoButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Input name"
-        android:inputType="textPersonName"
-        android:padding="12dp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        android:layout_weight="1"
+        android:text="Awo"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

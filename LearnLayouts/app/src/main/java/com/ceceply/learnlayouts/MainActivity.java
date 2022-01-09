@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
   private Button sayHelloButton;
   private Button sayGoodByeButton;
   private Button sayILoveYouButton;
+  private Button awoButton;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -21,9 +22,10 @@ public class MainActivity extends AppCompatActivity {
     setContentView(R.layout.activity_main);
 
     this.inputNameEditText = (EditText) findViewById(R.id.inputNameEditText);
-    this.sayHelloButton    = (Button) findViewById(R.id.sayHelloButton);
-    this.sayGoodByeButton  = (Button) findViewById(R.id.sayGoodByeButton);
-    this.sayILoveYouButton = (Button) findViewById(R.id.sayILoveYouButton);
+    this.sayHelloButton    = (Button)   findViewById(R.id.sayHelloButton);
+    this.sayGoodByeButton  = (Button)   findViewById(R.id.sayGoodByeButton);
+    this.sayILoveYouButton = (Button)   findViewById(R.id.sayILoveYouButton);
+    this.awoButton         = (Button)   findViewById(R.id.awoButton);
 
     this.sayHelloButton.setOnClickListener(new View.OnClickListener() {
       @Override
@@ -43,6 +45,14 @@ public class MainActivity extends AppCompatActivity {
       @Override
       public void onClick(View view) {
         startSayActivity(view, "I love you " + inputNameEditText.getText().toString() + "!!!");
+      }
+    });
+
+    Intent i = new Intent(this, AwoActivity.class);
+    this.awoButton.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View view) {
+        startActivity(i);
       }
     });
   }
